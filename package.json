@@ -1,0 +1,55 @@
+{
+  "name": "mcp-rag-server",
+  "version": "1.0.0",
+  "description": "MCP server exposing RAG (Retrieval-Augmented Generation) capabilities to Claude Code and other MCP clients",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "bin": {
+    "mcp-rag-server": "./dist/server.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/server.js",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "rag",
+    "retrieval-augmented-generation",
+    "claude",
+    "anthropic",
+    "vector-search",
+    "chromadb",
+    "embeddings"
+  ],
+  "author": "Dan Monteiro",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0xrdan/mcp-rag-server.git"
+  },
+  "homepage": "https://github.com/0xrdan/mcp-rag-server#readme",
+  "bugs": {
+    "url": "https://github.com/0xrdan/mcp-rag-server/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "rag-pipeline": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
+}

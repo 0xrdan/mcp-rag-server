@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "rag": {
+      "command": "node",
+      "args": ["/path/to/mcp-rag-server/dist/server.js"],
+      "env": {
+        "OPENAI_API_KEY": "sk-...",
+        "CHROMA_URL": "http://localhost:8000",
+        "CHROMA_COLLECTION": "my_knowledge_base"
+      }
+    }
+  }
+}
