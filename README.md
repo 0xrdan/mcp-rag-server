@@ -280,11 +280,24 @@ Same configuration works with Claude Desktop's MCP support:
 
 ---
 
-## Related Projects
+## Part of the Context Continuity Stack
 
-- [rag-pipeline](https://github.com/0xrdan/rag-pipeline) - The underlying RAG implementation
-- [topic-discovery](https://github.com/0xrdan/topic-discovery) - Multi-source topic aggregation
-- [ai-orchestrator](https://github.com/0xrdan/ai-orchestrator) - Multi-model LLM routing
+This repo exposes **context continuity as a protocol-level capability** — giving any MCP client access to persistent semantic memory.
+
+| Layer | Role | This Repo |
+|-------|------|-----------|
+| Intra-session | Short-term memory | — |
+| Document-scoped | Injected content | — |
+| **Retrieved** | **Long-term semantic memory via MCP** | **mcp-rag-server** |
+| Progressive | Staged responses | — |
+
+MCP RAG Server bridges the gap between vector databases and AI assistants. Instead of building custom integrations, any MCP-compatible tool (Claude Code, Claude Desktop, custom clients) gets instant access to your knowledge base.
+
+**Related repos:**
+- [rag-pipeline](https://github.com/0xrdan/rag-pipeline) — The underlying RAG implementation
+- [mcp-client-example](https://github.com/0xrdan/mcp-client-example) — Reference client for connecting to this server
+- [chatbot-widget](https://github.com/0xrdan/chatbot-widget) — Session cache, Research Mode, conversation export
+- [ai-orchestrator](https://github.com/0xrdan/ai-orchestrator) — Multi-model LLM routing
 
 ---
 
